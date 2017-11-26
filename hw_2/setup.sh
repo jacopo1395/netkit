@@ -10,7 +10,7 @@ ripngd=no
 isisd=no
 ldpd=no" > ./deamons
 
-for i in {1..12}; do
+for i in {1..11}; do
     mkdir -p r"$i"/etc/network
     mkdir r"$i"/etc/quagga
 
@@ -18,16 +18,25 @@ for i in {1..12}; do
     cp deamons r"$i"/etc/quagga/deamons
     touch r"$i"/etc/quagga/ospfd.conf
     touch r"$i"/etc/quagga/zebra.conf
+
+    touch r"$i".startup
+    echo "/etc/init.d/networking restart
+    /etc/init.d/quagga restart" > r"$i".startup
 done
 
 
-mkdir -p s1/etc/network
-touch s1/etc/network/interfaces
+for i in {1..2}; do
+    mkdir -p s"$i"/etc/network
+    touch s"$i"/etc/network/interfaces
+    touch s"$i".startup
+    echo "/etc/init.d/networking restart" > s"$i".startup
+done
 
-mkdir -p s2/etc/network
-touch s2/etc/network/interfaces
 
 mkdir -p pc/etc/network
 touch pc/etc/network/interfaces
+touch pc.startup
+echo "/etc/init.d/networking restart" > pc.startup
+
 
 rm ./deamons
