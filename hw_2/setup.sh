@@ -21,7 +21,7 @@ for i in {1..11}; do
 
     touch r"$i".startup
     echo "/etc/init.d/networking restart
-    /etc/init.d/quagga restart" > r"$i".startup
+/etc/init.d/quagga restart" > r"$i".startup
 done
 
 
