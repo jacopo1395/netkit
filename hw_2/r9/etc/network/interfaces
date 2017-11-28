@@ -2,11 +2,13 @@ auto eth0
 iface eth0 inet static
 	address 10.0.3.22
 	netmask 255.255.255.254
+	gateway 10.0.3.23
 
 auto eth1
 iface eth1 inet static
 	address 10.0.3.20
 	netmask 255.255.255.254
+	gateway 10.0.3.21
 
 auto eth2
 iface eth2 inet static
