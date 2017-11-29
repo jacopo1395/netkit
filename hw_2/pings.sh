@@ -1,4 +1,4 @@
-for i in {2..27}; do
+for i in {2..29}; do
     printf "10.0.3."$i" \t"
     ping -q -c 1 10.0.3."$i" &> /dev/null && echo online || echo offline
 done
