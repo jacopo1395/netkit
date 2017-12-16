@@ -15,11 +15,11 @@ iface eth2 inet static
 
 auto eth3
 iface eth3 inet static
-	address 10.0.0.22
+	address 1.0.0.22
 	netmask 255.255.255.254
 
 
 auto eth4
 iface eth4 inet static
-	address 10.0.0.7
+	address 1.0.0.7
 	netmask 255.255.255.254
