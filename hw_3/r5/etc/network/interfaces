@@ -20,6 +20,6 @@ iface eth3 inet static
 
 
 auto eth4
-iface eth3 inet static
+iface eth4 inet static
 	address 10.0.0.7
 	netmask 255.255.255.254
