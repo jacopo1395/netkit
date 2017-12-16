@@ -43,10 +43,10 @@ done
 mkdir -p dns/etc/network
 touch dns/etc/network/interfaces
 
-mkdir dns"$i"/etc/quagga
-cp daemons dns"$i"/etc/quagga/daemons
-touch dns"$i"/etc/quagga/ospfd.conf
-touch dns"$i"/etc/quagga/zebra.conf
+mkdir dns/etc/quagga
+cp daemons dns/etc/quagga/daemons
+touch dns/etc/quagga/ospfd.conf
+touch dns/etc/quagga/zebra.conf
 
 touch dns.startup
 echo "/etc/init.d/networking restart
