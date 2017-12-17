@@ -1,0 +1,15 @@
+$TTL 2d
+homework.edu. IN SOA dns.homework.edu. hostmaster.homework.edu. (
+        20171217;
+        28;
+        14;
+        3600000;
+        0;
+)
+
+homework.edu.	IN	NS	dns.homework.edu.
+
+dns.homework.edu.     IN      A       10.0.4.250
+pc2.homework.edu.     IN      A       10.0.3.100
+pc3.homework.edu.     IN      A       10.0.1.100
+pc4.homework.edu.     IN      A       10.0.2.100
