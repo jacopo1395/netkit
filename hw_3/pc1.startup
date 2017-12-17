@@ -2,8 +2,8 @@
 /etc/init.d/quagga restart
 
 echo "30.0.1.6    r7
-30.0.1.13	r8
-30.0.1.8	r9
+30.0.1.8	r8
+30.0.1.13	r9
 192.168.1.1	r10" > /etc/hosts
 
 echo -e '\n\n\n' | ssh-keygen
