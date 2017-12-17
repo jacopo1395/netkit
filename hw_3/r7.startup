@@ -16,9 +16,11 @@ chown ssh_user:ssh_user /home/ssh_user/.ssh/authorized_keys
 chmod 600 /home/ssh_user/.ssh/authorized_keys
 
 
-if [ -e /hostlab/id_rsa.pub ]
+
+if [ -e /hostlab/id_rsa7.pub ]
 then
-	cat /hostlab/id_rsa.pub > /home/ssh_user/.ssh/authorized_keys
+	cat /hostlab/id_rsa7.pub > /home/ssh_user/.ssh/authorized_keys
+	rm /hostlab/id_rsa7.pub
 else
 	sleep 1
 fi

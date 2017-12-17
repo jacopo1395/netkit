@@ -1,8 +1,14 @@
 /etc/init.d/networking restart
 /etc/init.d/quagga restart
 
-echo "30.0.1.6	r7" > /etc/hosts
+echo "30.0.1.6    r7
+30.0.1.13	r8
+30.0.1.8	r9
+192.168.1.1	r10" > /etc/hosts
 
 echo -e '\n\n\n' | ssh-keygen
 pwd
-cp /root/.ssh/id_rsa.pub /hostlab
+cp /root/.ssh/id_rsa.pub /hostlab/id_rsa7.pub
+cp /root/.ssh/id_rsa.pub /hostlab/id_rsa8.pub
+cp /root/.ssh/id_rsa.pub /hostlab/id_rsa9.pub
+cp /root/.ssh/id_rsa.pub /hostlab/id_rsa10.pub
